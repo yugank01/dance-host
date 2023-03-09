@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 // const fs = require("fs");
 const app = express();
-const port = 8000;
+const port = 80;
 
 app.use('/static', express.static('static'))
 app.use(express.urlencoded())
@@ -20,7 +20,8 @@ app.use(express.urlencoded())
 
 // THIS IS USED FOR HTML FILES INCLUSION IN EXPRESS
 app.get('/', (req, res)=> {
-    res.sendFile(path.join(__dirname, '/views/index.html'));
+    res.sendFile(path.join(__dirname, '/index.html'));
+    // res.sendFile(path.join(__dirname, '/views/index.html'));
   });
 
 app.listen(port, ()=>{
