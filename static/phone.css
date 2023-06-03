@@ -85,3 +85,21 @@
     height: 45px;
     font-size: 12px;
 }
+
+.myInput{
+    width: 80%;
+    padding: 6px;
+    margin: 3px;
+    font-size: 12px;
+}
+
+h1{
+    font-size: 30px;
+}
+
+.btn{
+    padding: 3px 20px;
+    font-size: 15px;
+    margin: 10px;
+    border-radius: 20px;
+}
