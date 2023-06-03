@@ -9,6 +9,7 @@ app.use("/static", express.static("static"));
 app.use(express.urlencoded());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use(express.static(path.join(__dirname, 'views')));
 
 
 
@@ -35,7 +36,8 @@ app.get("/home", (req, res) => {
 });
 
 app.get("/contact", (req, res) => {
-  res.sendFile(path.join(__dirname, "./contact.html"));
+  // res.sendFile(path.join(__dirname, "./contact.html"));
+  res.sendFile(path.join(__dirname, 'views', 'contact.html'));
 
 });
 
